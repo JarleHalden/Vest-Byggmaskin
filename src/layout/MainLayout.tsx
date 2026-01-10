@@ -1,16 +1,15 @@
-import { Outlet, NavLink } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default function MainLayout() {
   return (
-    <div className="min-h-screen p-6">
-      <nav className="mb-6 flex gap-4">
-        <NavLink to="/">Hjem</NavLink>
-        <NavLink to="/tjenester">Tjenester</NavLink>
-        <NavLink to="/om">Om oss</NavLink>
-        <NavLink to="/kontakt">Kontakt</NavLink>
-      </nav>
-      
-      <Outlet />
-    </div>
+    <>
+      <Navbar />
+      <main>
+        <Outlet />
+      </main>
+      <Footer />
+    </>
   );
 }
