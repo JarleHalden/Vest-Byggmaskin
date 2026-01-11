@@ -2,12 +2,14 @@ import { useEffect, useState } from "react";
 
 type SlideshowProps = {
   images: string[];
-  intervalMs?: number; // valgfritt, default 3000
+  intervalMs?: number;
+  className?: string;
 };
 
 export default function Slideshow({
   images,
-  intervalMs = 3000,
+  intervalMs = 4000,
+  className = "",
 }: SlideshowProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -24,12 +26,23 @@ export default function Slideshow({
   if (images.length === 0) return null;
 
   return (
-    <div className="relative w-full">
-      <img
-        src={images[currentIndex]}
-        alt=""
-        className="w-full object-cover"
-      />
+    <div 
+      className={`relative w-full h-full ${className}`} 
+      style={{ overflow: "hidden" }}
+    >
+      {images.map((image, index) => (
+        <img
+          key={image}
+          src={image}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{
+            opacity: index === currentIndex ? 1 : 0,
+            transition: "opacity 1000ms ease-in-out",
+            pointerEvents: index === currentIndex ? "auto" : "none",
+          }}
+        />
+      ))}
     </div>
   );
 }

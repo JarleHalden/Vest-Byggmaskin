@@ -1,52 +1,63 @@
 import { NavLink } from "react-router-dom";
+import Container from "./Container";
 
 export default function Navbar() {
   return (
-    <nav className="sticky top-0 z-50 border-b bg-white">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        {/* Logo / navn */}
-        <div className="font-semibold">
-          Vest Byggmaskin
+    <nav
+      className="sticky top-0 z-50 border-b"
+      style={{ 
+        height: "72px",
+        backgroundColor: "#FFFFFF",
+        borderBottomColor: "#E5E7EB"
+      }}
+    >
+      <Container>
+        <div className="flex items-center justify-between h-full">
+          {/* Logo / navn */}
+          <div className="font-semibold text-base" style={{ fontWeight: 600 }}>
+            Vest Byggmaskin
+          </div>
+
+          {/* Lenker */}
+          <div className="flex items-center gap-6">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                `transition-colors hover:underline hover:text-[#FEAB24] ${
+                  isActive ? "underline text-[#FEAB24]" : "text-[#0F172A]"
+                }`
+              }
+              style={{ fontSize: "16px", fontWeight: 500 }}
+            >
+              Hjem
+            </NavLink>
+
+            <NavLink
+              to="/tjenester"
+              className={({ isActive }) =>
+                `transition-colors hover:underline hover:text-[#FEAB24] ${
+                  isActive ? "underline text-[#FEAB24]" : "text-[#0F172A]"
+                }`
+              }
+              style={{ fontSize: "16px", fontWeight: 500 }}
+            >
+              Tjenester
+            </NavLink>
+
+            <NavLink
+              to="/kontakt"
+              className={({ isActive }) =>
+                `transition-colors hover:underline hover:text-[#FEAB24] ${
+                  isActive ? "underline text-[#FEAB24]" : "text-[#0F172A]"
+                }`
+              }
+              style={{ fontSize: "16px", fontWeight: 500 }}
+            >
+              Kontakt
+            </NavLink>
+          </div>
         </div>
-
-        {/* Lenker */}
-        <div className="flex items-center gap-6">
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              isActive ? "font-semibold underline" : ""
-            }
-          >
-            Hjem
-          </NavLink>
-
-          <NavLink
-            to="/tjenester"
-            className={({ isActive }) =>
-              isActive ? "font-semibold underline" : ""
-            }
-          >
-            Tjenester
-          </NavLink>
-
-          <NavLink
-            to="/kontakt"
-            className={({ isActive }) =>
-              isActive ? "font-semibold underline" : ""
-            }
-          >
-            Kontakt
-          </NavLink>
-
-          {/* Ringe-knapp (dummy) */}
-          <a
-            href="tel:00000000"
-            className="rounded border px-3 py-1"
-          >
-            Ring oss
-          </a>
-        </div>
-      </div>
+      </Container>
     </nav>
   );
 }
