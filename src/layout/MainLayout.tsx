@@ -6,7 +6,7 @@ export default function MainLayout() {
   return (
     <div
       className="min-h-screen flex flex-col"
-      style={{ backgroundColor: "#F5F5F5" }}
+      style={{ backgroundColor: "var(--color-background)" }}
     >
       <Navbar />
 

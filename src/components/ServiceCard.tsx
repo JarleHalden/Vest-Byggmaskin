@@ -6,6 +6,8 @@ type ServiceCardProps = {
   icon: React.ComponentType<{ size?: number; style?: React.CSSProperties }>;
   image?: string; // Optional image path
   imageAlt?: string; // Optional alt text for image
+  linkLabel?: string;
+  linkHref?: string;
 };
 
 export default function ServiceCard({
@@ -14,87 +16,48 @@ export default function ServiceCard({
   icon: Icon,
   image,
   imageAlt,
+  linkLabel,
+  linkHref,
 }: ServiceCardProps) {
   return (
-    <div
-      className="rounded-xl shadow-sm transition-transform hover:-translate-y-1"
-      style={{
-        padding: "24px",
-        borderRadius: "12px",
-        boxShadow: "0 4px 12px rgba(0,0,0,0.05)",
-        backgroundColor: "#FFFFFF",
-      }}
-      onMouseEnter={(e) => {
-        e.currentTarget.style.boxShadow = "0 6px 16px rgba(0,0,0,0.08)";
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.boxShadow = "0 4px 12px rgba(0,0,0,0.05)";
-      }}
-    >
+    <div className="service-card">
       {/* Title row with icon */}
-      <div className="flex items-center justify-between mb-4">
-        <h3
-          className="font-semibold"
-          style={{
-            fontSize: "20px",
-            lineHeight: "28px",
-            fontWeight: 600,
-            color: "#0F172A",
-          }}
-        >
-          {title}
-        </h3>
-        <Icon
-          size={22}
-          style={{ color: "#0F172A", flexShrink: 0 }}
-        />
+      <div className="flex items-center justify-between">
+        <h3 className="service-card-title">{title}</h3>
+        <Icon size={22} style={{ color: "var(--color-text)", flexShrink: 0 }} />
       </div>
 
       {/* Description */}
-      <p
-        className="mb-4"
-        style={{
-          fontSize: "16px",
-          lineHeight: "26px",
-          fontWeight: 400,
-          color: "#0F172A",
-        }}
-      >
+      <p className="service-card-description line-clamp-3 body-text">
         {description}
       </p>
 
+      <div className="flex-1" />
+
       {/* Image or placeholder */}
-      <div
-        className="rounded-lg overflow-hidden"
-        style={{
-          backgroundColor: image ? "transparent" : "#E0E0E0",
-          borderRadius: "8px",
-          aspectRatio: "4/3",
-          width: "100%",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
+      <div className="service-card-media">
         {image ? (
           <img
             src={image}
             alt={imageAlt || title}
             className="w-full h-full object-cover"
-            style={{ borderRadius: "8px" }}
           />
         ) : (
-          <span
-            style={{
-              fontSize: "14px",
-              color: "#9CA3AF",
-              fontWeight: 400,
-            }}
-          >
+          <span className="small-text" style={{ color: "var(--color-muted)" }}>
             BILDE
           </span>
         )}
       </div>
+
+      {linkLabel && linkHref ? (
+        <a
+          className="mt-4 text-sm font-semibold"
+          href={linkHref}
+          style={{ color: "var(--color-brand)" }}
+        >
+          {linkLabel}
+        </a>
+      ) : null}
     </div>
   );
 }

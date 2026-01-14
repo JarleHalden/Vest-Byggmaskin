@@ -2,14 +2,15 @@ import Container from "../components/Container";
 import Section from "../components/Section";
 import ServiceCard from "../components/ServiceCard";
 import Slideshow from "../components/Slideshow";
+import { Link } from "react-router-dom";
 import { Hammer, Shovel, Wrench } from "lucide-react";
 
 // Placeholder images - replace these URLs with your actual images when ready
 // To use your own images, uncomment the imports below and comment out the placeholder URLs
 const heroImages = [
-  "https://picsum.photos/1200/900?random=1",
-  "https://picsum.photos/1200/900?random=2",
-  "https://picsum.photos/1200/900?random=3",
+  "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80",
+  "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80",
+  "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1200&q=80",
 ];
 
 // When you add your own images, replace the above with:
@@ -19,9 +20,12 @@ const heroImages = [
 // const heroImages = [heroImage1, heroImage2, heroImage3];
 
 // Service card images - placeholder URLs
-const serviceTomrerImage = "https://picsum.photos/800/600?random=10";
-const serviceGrunnarbeidImage = "https://picsum.photos/800/600?random=11";
-const serviceDriftImage = "https://picsum.photos/800/600?random=12";
+const serviceTomrerImage =
+  "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=960&q=80";
+const serviceGrunnarbeidImage =
+  "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=960&q=80";
+const serviceDriftImage =
+  "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=960&q=80";
 
 // When you add your own images, replace the above with:
 // import serviceTomrerImage from "../assets/service-tomrer.jpg";
@@ -36,61 +40,24 @@ export default function Home() {
         <Container>
           <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
             {/* Left: Text + CTA */}
-            <div className="space-y-6">
-              <h1
-                className="font-bold"
-                style={{
-                  fontSize: "40px",
-                  lineHeight: "48px",
-                  fontWeight: 700,
-                  color: "#0F172A",
-                }}
-              >
-                Vest Byggmaskin
-              </h1>
-              <p
-                className="max-w-lg"
-                style={{
-                  fontSize: "16px",
-                  lineHeight: "26px",
-                  fontWeight: 400,
-                  color: "#0F172A",
-                }}
-              >
-                Din pålitelige partner for bygge- og anleggsarbeid. Vi leverer
-                kvalitet og service du kan stole på.
+            <div>
+              <h1 className="heading-1">Vest Byggmaskin</h1>
+              <p className="body-text measure mt-4">
+                Din pålitelige partner for bygge- og anleggsarbeid i
+                Bergensområdet. Vi leverer kvalitet og service du kan stole på.
               </p>
-              <button
-                className="rounded-lg transition-colors"
-                style={{
-                  backgroundColor: "#FEAB24",
-                  color: "#0F172A",
-                  padding: "14px 24px",
-                  borderRadius: "8px",
-                  fontSize: "16px",
-                  fontWeight: 500,
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = "#E89A1F";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = "#FEAB24";
-                }}
-              >
-                Kontakt oss
-              </button>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <Link to="/kontakt" className="btn-primary">
+                  Kontakt oss
+                </Link>
+                <Link to="/tjenester" className="btn-secondary">
+                  Se tjenester
+                </Link>
+              </div>
             </div>
 
             {/* Right: Slideshow with smooth fade transition */}
-            <div
-              className="rounded-lg overflow-hidden"
-              style={{
-                backgroundColor: "#E0E0E0",
-                borderRadius: "8px",
-                aspectRatio: "4/3",
-                width: "100%",
-              }}
-            >
+            <div className="media-frame">
               <Slideshow
                 images={heroImages}
                 intervalMs={4000}
@@ -104,35 +71,32 @@ export default function Home() {
       {/* Services Section */}
       <Section>
         <Container>
-          <h2
-            className="mb-12 font-semibold"
-            style={{
-              fontSize: "28px",
-              lineHeight: "36px",
-              fontWeight: 600,
-              color: "#0F172A",
-            }}
-          >
-            Våre tjenester
-          </h2>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+            <div>
+              <h2 className="heading-2 mt-2">Våre tjenester</h2>
+            </div>
+            <Link to="/tjenester" className="btn-secondary">
+              Se alle tjenester
+            </Link>
+          </div>
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <ServiceCard
               title="Tømrer"
-              description="Oppussing, rehabilitering, tilbygg, etterisolering, vindu og bad. Praktiske løsninger, ryddig arbeid og tett dialog hele veien."
+              description="Oppussing, rehabilitering og tilbygg med ryddig utførelse og tydelig dialog."
               icon={Hammer}
               image={serviceTomrerImage}
               imageAlt="Tømrer tjenester"
             />
             <ServiceCard
               title="Grunnarbeid & maskin"
-              description="Oppussing, rehabilitering, tilbygg, etterisolering, vindu og bad. Praktiske løsninger, ryddig arbeid og tett dialog hele veien."
+              description="Graving, planering og maskinoppdrag utført effektivt og sikkert."
               icon={Shovel}
               image={serviceGrunnarbeidImage}
               imageAlt="Grunnarbeid og maskin tjenester"
             />
             <ServiceCard
               title="Drift & Vedlikehold"
-              description="Brøyting og utvendig vedlikehold for private og næring. Pålitelig hjelp når du trenger det, gjennom hele året."
+              description="Brøyting og løpende vedlikehold for private og næring gjennom hele året."
               icon={Wrench}
               image={serviceDriftImage}
               imageAlt="Drift og vedlikehold tjenester"

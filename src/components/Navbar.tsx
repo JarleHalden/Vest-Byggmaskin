@@ -1,33 +1,37 @@
 import { NavLink } from "react-router-dom";
+import logoBlack from "../assets/logo-black.png";
 import Container from "./Container";
 
 export default function Navbar() {
   return (
     <nav
-      className="sticky top-0 z-50 border-b"
-      style={{ 
-        height: "72px",
-        backgroundColor: "#FFFFFF",
-        borderBottomColor: "#E5E7EB"
+      className="sticky top-0 z-50 border-b min-h-[56px] py-2 sm:min-h-[72px] sm:py-3"
+      style={{
+        backgroundColor: "var(--color-surface)",
+        borderBottomColor: "var(--color-border)",
       }}
     >
       <Container>
-        <div className="flex items-center justify-between h-full">
+        <div className="flex w-full items-center justify-between">
           {/* Logo / navn */}
-          <div className="font-semibold text-base" style={{ fontWeight: 600 }}>
-            Vest Byggmaskin
+          <div className="flex items-center gap-3">
+            <img
+              src={logoBlack}
+              alt="Vest Byggmaskin"
+              className="h-9 w-auto"
+            />
+            <div className="font-semibold text-base">Vest Byggmaskin</div>
           </div>
 
+          <div className="flex-1" aria-hidden="true" />
+
           {/* Lenker */}
-          <div className="flex items-center gap-6">
+          <div className="flex items-center justify-end gap-6">
             <NavLink
               to="/"
               className={({ isActive }) =>
-                `transition-colors hover:underline hover:text-[#FEAB24] ${
-                  isActive ? "underline text-[#FEAB24]" : "text-[#0F172A]"
-                }`
+                `nav-link pb-2${isActive ? " nav-link-active" : ""}`
               }
-              style={{ fontSize: "16px", fontWeight: 500 }}
             >
               Hjem
             </NavLink>
@@ -35,26 +39,30 @@ export default function Navbar() {
             <NavLink
               to="/tjenester"
               className={({ isActive }) =>
-                `transition-colors hover:underline hover:text-[#FEAB24] ${
-                  isActive ? "underline text-[#FEAB24]" : "text-[#0F172A]"
-                }`
+                `nav-link pb-2${isActive ? " nav-link-active" : ""}`
               }
-              style={{ fontSize: "16px", fontWeight: 500 }}
             >
               Tjenester
             </NavLink>
 
             <NavLink
+              to="/om"
+              className={({ isActive }) =>
+                `nav-link pb-2${isActive ? " nav-link-active" : ""}`
+              }
+            >
+              Om oss
+            </NavLink>
+
+            <NavLink
               to="/kontakt"
               className={({ isActive }) =>
-                `transition-colors hover:underline hover:text-[#FEAB24] ${
-                  isActive ? "underline text-[#FEAB24]" : "text-[#0F172A]"
-                }`
+                `nav-link pb-2${isActive ? " nav-link-active" : ""}`
               }
-              style={{ fontSize: "16px", fontWeight: 500 }}
             >
               Kontakt
             </NavLink>
+
           </div>
         </div>
       </Container>

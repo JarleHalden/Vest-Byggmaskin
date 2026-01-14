@@ -13,7 +13,7 @@ export default function Container({
 }: ContainerProps) {
   const containerClasses = fullWidth
     ? "w-full"
-    : "mx-auto px-6"; // px-6 = 24px
+    : "mx-auto w-full px-4 lg:px-6"; // px-4 = 16px, lg:px-6 = 24px
   const classes = `${containerClasses}${className ? ` ${className}` : ""}`;
   return (
     <div

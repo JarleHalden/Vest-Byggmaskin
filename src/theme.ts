@@ -9,19 +9,20 @@ export const theme = {
    * Color System - Exact hex values as specified
    */
   colors: {
-    background: "#F5F5F5",
+    background: "#F7F7F5",
     surface: "#FFFFFF",
-    accent: "#FEAB24",
-    accentHover: "#E89A1F",
+    brand: "#F59E0B",
+    brandHover: "#D97706",
     textPrimary: "#0F172A",
-    borderSubtle: "#E5E7EB",
-    placeholder: "#E0E0E0",
+    textMuted: "#475569",
+    borderSubtle: "#E2E8F0",
   },
 
   /**
    * Spacing Scale (px) - ONLY these values
    */
   spacing: {
+    "2xs": 4,
     xs: 8,
     sm: 12,
     md: 16,
@@ -36,31 +37,38 @@ export const theme = {
    */
   typography: {
     h1: {
-      fontSize: "40px",
-      lineHeight: "48px",
+      fontSize: "48px",
+      lineHeight: "1.1",
       fontWeight: 700,
     },
     h2: {
-      fontSize: "28px",
-      lineHeight: "36px",
+      fontSize: "32px",
+      lineHeight: "1.2",
       fontWeight: 600,
     },
     h3: {
       fontSize: "20px",
-      lineHeight: "28px",
+      lineHeight: "1.4",
       fontWeight: 600,
     },
     body: {
       fontSize: "16px",
-      lineHeight: "26px",
+      lineHeight: "1.6",
       fontWeight: 400,
     },
     small: {
       fontSize: "14px",
-      lineHeight: "22px",
+      lineHeight: "1.5",
       fontWeight: 400,
     },
   },
+
+  radius: {
+    standard: "16px",
+    image: "12px",
+  },
+
+  measure: "65ch",
 
   /**
    * Layout Constants
