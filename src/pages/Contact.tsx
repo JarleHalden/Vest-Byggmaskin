@@ -1,10 +1,15 @@
 import Container from "../components/Container";
 import Section from "../components/Section";
 import Card from "../components/ui/Card";
+import Seo from "../components/Seo";
 
 export default function Contact() {
   return (
     <>
+      <Seo
+        title="Kontakt oss | Vest Bygg & Maskin"
+        description="Ta kontakt for en uforpliktende befaring eller spørsmål om våre tjenester."
+      />
       <Section spacing="tight" className="-mt-4">
         <Container>
           <div className="max-w-[var(--measure)]">

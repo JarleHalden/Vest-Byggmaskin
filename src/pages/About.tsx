@@ -2,10 +2,15 @@ import Container from "../components/Container";
 import Section from "../components/Section";
 import PageHeader from "../components/ui/PageHeader";
 import { ButtonLink } from "../components/ui/Button";
+import Seo from "../components/Seo";
 
 export default function About() {
   return (
     <>
+      <Seo
+        title="Om Vest Bygg & Maskin"
+        description="Vest Bygg & Maskin AS er et bygg- og maskinfirma med base i Bergen, og vi tar oppdrag i hele Vestland."
+      />
       <PageHeader
         title="Om Vest Bygg & Maskin"
         subtitle=""

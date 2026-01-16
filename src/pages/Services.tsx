@@ -3,10 +3,15 @@ import Section from "../components/Section";
 import Card from "../components/ui/Card";
 import PageHeader from "../components/ui/PageHeader";
 import { ButtonLink } from "../components/ui/Button";
+import Seo from "../components/Seo";
 
 export default function Services() {
   return (
     <>
+      <Seo
+        title="Tjenester | Vest Bygg & Maskin"
+        description="Vi utfører oppdrag for private og næring – ta kontakt for befaring"
+      />
       <PageHeader
         title="Tjenester"
         subtitle="Vi utfører oppdrag for private og næring – ta kontakt for befaring"

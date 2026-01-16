@@ -4,6 +4,7 @@ import ServiceCard from "../components/ServiceCard";
 import Slideshow from "../components/Slideshow";
 import { Link } from "react-router-dom";
 import { Hammer, Shovel, Trees } from "lucide-react";
+import Seo from "../components/Seo";
 
 // Placeholder images - replace these URLs with your actual images when ready
 // To use your own images, uncomment the imports below and comment out the placeholder URLs
@@ -35,6 +36,10 @@ const serviceDriftImage =
 export default function Home() {
   return (
     <>
+      <Seo
+        title="Vest Bygg & Maskin"
+        description="Din pålitelige partner for bygge- og anleggsarbeid i Bergensområdet. Vi leverer kvalitet og service du kan stole på."
+      />
       {/* Hero Section */}
       <Section spacing="hero">
         <Container>
