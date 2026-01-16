@@ -3,7 +3,7 @@ import Section from "../components/Section";
 import ServiceCard from "../components/ServiceCard";
 import Slideshow from "../components/Slideshow";
 import { Link } from "react-router-dom";
-import { Hammer, Shovel, Wrench } from "lucide-react";
+import { Hammer, Shovel, Trees } from "lucide-react";
 
 // Placeholder images - replace these URLs with your actual images when ready
 // To use your own images, uncomment the imports below and comment out the placeholder URLs
@@ -95,9 +95,9 @@ export default function Home() {
               imageAlt="Grunnarbeid og maskin tjenester"
             />
             <ServiceCard
-              title="Drift & Vedlikehold"
-              description="Brøyting og løpende vedlikehold for private og næring gjennom hele året."
-              icon={Wrench}
+              title="Hage & uteområder"
+              description="Rydding, grunnarbeid og utbedring av uteområder – når det trengs både maskin og håndverk."
+              icon={Trees}
               image={serviceDriftImage}
               imageAlt="Drift og vedlikehold tjenester"
             />

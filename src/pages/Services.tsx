@@ -92,7 +92,6 @@ export default function Services() {
                 >
                   post@vest-byggmaskin.no
                 </a>
-                <span className="text-[var(--color-muted)]">·</span> 
               </div>
             </div>
             <ButtonLink to="/kontakt">Kontakt oss</ButtonLink>
