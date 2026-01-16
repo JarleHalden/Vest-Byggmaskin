@@ -28,7 +28,7 @@ export default function Contact() {
                 className="inline-flex items-center justify-center rounded-xl border border-[var(--color-border)] px-5 py-3 text-lg font-semibold text-[var(--color-text)] transition-colors hover:border-[var(--color-brand)] hover:text-[var(--color-brand)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-brand)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-background)]"
                 href="tel:+4745692543"
               >
-                456 92 543
+                +47 456 92 543
               </a>
             </Card>
 
@@ -40,7 +40,7 @@ export default function Contact() {
                 className="inline-flex items-center justify-center rounded-xl border border-[var(--color-border)] px-5 py-3 text-lg font-semibold text-[var(--color-text)] transition-colors hover:border-[var(--color-brand)] hover:text-[var(--color-brand)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-brand)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-background)]"
                 href="tel:+4794974498"
               >
-                949 74 498
+                +47 949 74 498
               </a>
             </Card>
           </div>

@@ -55,7 +55,7 @@ import heroImage from "../assets/hero-image.jpg";
 
 <img 
   src={heroImage} 
-  alt="Vest Byggmaskin" 
+  alt="Vest Bygg & Maskin" 
   className="w-full h-full object-cover"
 />
 

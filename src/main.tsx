@@ -23,6 +23,12 @@ const router = createBrowserRouter([
   },
 ]);
 
+if (import.meta.env.DEV) {
+  console.info(
+    "Hvis du ser runtime.lastError spam, test uten extensions (Incognito)."
+  );
+}
+
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <RouterProvider router={router} />

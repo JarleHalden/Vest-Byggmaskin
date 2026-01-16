@@ -40,7 +40,7 @@ export default function Services() {
                   Ring oss
                 </p>
                 <a className="btn-primary mt-3" href="tel:+4745692543">
-                  + 47 456 92 543
+                  +47 456 92 543
                 </a>
               </div>
             </Card>
@@ -70,7 +70,7 @@ export default function Services() {
                   Ring oss
                 </p>
                 <a className="btn-primary mt-3" href="tel:+4794974498">
-                  + 47 949 74 498
+                  +47 949 74 498
                 </a>
               </div>
             </Card>

@@ -13,14 +13,7 @@ export default function Container({
 }: ContainerProps) {
   const containerClasses = fullWidth
     ? "w-full"
-    : "mx-auto w-full px-4 lg:px-6"; // px-4 = 16px, lg:px-6 = 24px
+    : "mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8";
   const classes = `${containerClasses}${className ? ` ${className}` : ""}`;
-  return (
-    <div
-      className={classes}
-      style={fullWidth ? undefined : { maxWidth: "1200px" }}
-    >
-      {children}
-    </div>
-  );
+  return <div className={classes}>{children}</div>;
 }

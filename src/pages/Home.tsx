@@ -41,7 +41,7 @@ export default function Home() {
           <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
             {/* Left: Text + CTA */}
             <div>
-              <h1 className="heading-1">Vest Byggmaskin</h1>
+              <h1 className="heading-1">Vest Bygg & Maskin</h1>
               <p className="body-text measure mt-4">
                 Din pålitelige partner for bygge- og anleggsarbeid i
                 Bergensområdet. Vi leverer kvalitet og service du kan stole på.
