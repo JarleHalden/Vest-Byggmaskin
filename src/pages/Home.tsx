@@ -5,33 +5,14 @@ import Slideshow from "../components/Slideshow";
 import { Link } from "react-router-dom";
 import { Hammer, Shovel, Trees } from "lucide-react";
 import Seo from "../components/Seo";
+import serviceTomrerImage from "../assets/stilas.jpg";
+import serviceGrunnarbeidImage from "../assets/excavator.jpg";
+import serviceHageImage from "../assets/Hage.jpg";
+import heroImage1 from "../assets/stilas.jpg";
+import heroImage2 from "../assets/excavator.jpg";
+import heroImage3 from "../assets/Hage.jpg";
 
-// Placeholder images - replace these URLs with your actual images when ready
-// To use your own images, uncomment the imports below and comment out the placeholder URLs
-const heroImages = [
-  "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80",
-  "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80",
-  "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1200&q=80",
-];
-
-// When you add your own images, replace the above with:
-// import heroImage1 from "../assets/hero-image-1.jpg";
-// import heroImage2 from "../assets/hero-image-2.jpg";
-// import heroImage3 from "../assets/hero-image-3.jpg";
-// const heroImages = [heroImage1, heroImage2, heroImage3];
-
-// Service card images - placeholder URLs
-const serviceTomrerImage =
-  "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=960&q=80";
-const serviceGrunnarbeidImage =
-  "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=960&q=80";
-const serviceDriftImage =
-  "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=960&q=80";
-
-// When you add your own images, replace the above with:
-// import serviceTomrerImage from "../assets/service-tomrer.jpg";
-// import serviceGrunnarbeidImage from "../assets/service-grunnarbeid.jpg";
-// import serviceDriftImage from "../assets/service-drift.jpg";
+const heroImages = [heroImage1, heroImage2, heroImage3];
 
 export default function Home() {
   return (
@@ -97,14 +78,14 @@ export default function Home() {
               description="Graving, planering og maskinoppdrag utført effektivt og sikkert."
               icon={Shovel}
               image={serviceGrunnarbeidImage}
-              imageAlt="Grunnarbeid og maskin tjenester"
+              imageAlt="Maskin- og grunnarbeid fra Vest Bygg & Maskin"
             />
             <ServiceCard
               title="Hage & uteområder"
               description="Rydding, grunnarbeid og utbedring av uteområder – når det trengs både maskin og håndverk."
               icon={Trees}
-              image={serviceDriftImage}
-              imageAlt="Drift og vedlikehold tjenester"
+              image={serviceHageImage}
+              imageAlt="Hage- og uteområder fra Vest Bygg & Maskin"
             />
           </div>
         </Container>

@@ -6,6 +6,7 @@ type ServiceCardProps = {
   icon: React.ComponentType<{ size?: number; style?: React.CSSProperties }>;
   image?: string; // Optional image path
   imageAlt?: string; // Optional alt text for image
+  imagePosition?: "top" | "center" | "bottom";
   linkLabel?: string;
   linkHref?: string;
 };
@@ -16,9 +17,17 @@ export default function ServiceCard({
   icon: Icon,
   image,
   imageAlt,
+  imagePosition = "center",
   linkLabel,
   linkHref,
 }: ServiceCardProps) {
+  const objectPositionClass =
+    imagePosition === "top"
+      ? "object-top"
+      : imagePosition === "bottom"
+        ? "object-bottom"
+        : "object-center";
+
   return (
     <div className="service-card">
       {/* Title row with icon */}
@@ -40,7 +49,7 @@ export default function ServiceCard({
           <img
             src={image}
             alt={imageAlt || title}
-            className="w-full h-full object-cover"
+            className={`h-full w-full object-cover ${objectPositionClass}`}
           />
         ) : (
           <span className="small-text" style={{ color: "var(--color-muted)" }}>

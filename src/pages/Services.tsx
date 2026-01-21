@@ -22,7 +22,6 @@ export default function Services() {
           <div className="grid gap-6 lg:grid-cols-2">
             <Card hover className="flex h-full flex-col gap-6">
               <div>
-                <p className="eyebrow">Tømrertjenester</p>
                 <h2 className="heading-2 mt-2">Tømrertjenester</h2>
                 <div
                   className="mt-3 h-0.5 w-12 rounded-full bg-[var(--color-brand)]"
@@ -52,7 +51,6 @@ export default function Services() {
 
             <Card hover className="flex h-full flex-col gap-6">
               <div>
-                <p className="eyebrow">Maskin & grunnarbeid</p>
                 <h2 className="heading-2 mt-2">Maskin & grunnarbeid</h2>
                 <div
                   className="mt-3 h-0.5 w-12 rounded-full bg-[var(--color-brand)]"
