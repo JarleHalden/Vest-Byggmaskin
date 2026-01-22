@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <>
       <Seo
-        title="Vest Bygg & Maskin"
+        title="Vest Bygg & Maskin AS"
         description="Din pålitelige partner for bygge- og anleggsarbeid i Bergensområdet. Vi leverer kvalitet og service du kan stole på."
       />
       {/* Hero Section */}
@@ -27,7 +27,10 @@ export default function Home() {
           <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
             {/* Left: Text + CTA */}
             <div>
-              <h1 className="heading-1">Vest Bygg & Maskin</h1>
+              <h1 className="heading-1 lg:whitespace-nowrap">
+                Vest Bygg &{" "}
+                <span className="whitespace-nowrap">Maskin AS</span>
+              </h1>
               <p className="body-text measure mt-4">
                 Din pålitelige partner for bygge- og anleggsarbeid i
                 Bergensområdet. Vi leverer kvalitet og service du kan stole på.
@@ -78,14 +81,14 @@ export default function Home() {
               description="Graving, planering og maskinoppdrag utført effektivt og sikkert."
               icon={Shovel}
               image={serviceGrunnarbeidImage}
-              imageAlt="Maskin- og grunnarbeid fra Vest Bygg & Maskin"
+              imageAlt="Maskin- og grunnarbeid fra Vest Bygg & Maskin AS"
             />
             <ServiceCard
               title="Hage & uteområder"
               description="Rydding, grunnarbeid og utbedring av uteområder – når det trengs både maskin og håndverk."
               icon={Trees}
               image={serviceHageImage}
-              imageAlt="Hage- og uteområder fra Vest Bygg & Maskin"
+              imageAlt="Hage- og uteområder fra Vest Bygg & Maskin AS"
             />
           </div>
         </Container>

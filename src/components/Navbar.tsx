@@ -30,12 +30,12 @@ export default function Navbar() {
           >
             <img
               src={logoBlack}
-              alt="Vest Bygg & Maskin"
+              alt="Vest Bygg & Maskin AS"
               className="h-9 w-auto shrink-0"
             />
             <div className="min-w-0">
               <div className="font-semibold text-base truncate">
-                Vest Bygg & Maskin
+                Vest Bygg & Maskin AS
               </div>
             </div>
           </NavLink>

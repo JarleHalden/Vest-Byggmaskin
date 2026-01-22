@@ -23,12 +23,17 @@ export default function About() {
   return (
     <>
       <Seo
-        title="Om Vest Bygg & Maskin"
+        title="Om Vest Bygg & Maskin AS"
         description="Vest Bygg & Maskin AS er et bygg- og maskinfirma med base i Bergen, og vi tar oppdrag i hele Vestland."
       />
       <PageHeader
-        title="Om Vest Bygg & Maskin"
+        title={
+          <>
+            Om Vest Bygg & <span className="whitespace-nowrap">Maskin AS</span>
+          </>
+        }
         subtitle=""
+        titleClassName="lg:whitespace-nowrap"
         className="md:py-6 lg:py-8"
       />
 
