@@ -19,7 +19,7 @@ export default function Home() {
     <>
       <Seo
         title="Vest Bygg & Maskin AS"
-        description="Din pålitelige partner for bygge- og anleggsarbeid i Bergensområdet. Vi leverer kvalitet og service du kan stole på."
+        description="Din pålitelige partner for bygg- og anleggsarbeid i Bergensområdet. Vi leverer kvalitet og service du kan stole på."
       />
       {/* Hero Section */}
       <Section spacing="hero">
@@ -32,7 +32,7 @@ export default function Home() {
                 <span className="whitespace-nowrap">Maskin AS</span>
               </h1>
               <p className="body-text measure mt-4">
-                Din pålitelige partner for bygge- og anleggsarbeid i
+                Din pålitelige partner for bygg- og anleggsarbeid i
                 Bergensområdet. Vi leverer kvalitet og service du kan stole på.
               </p>
               <div className="mt-6 flex flex-wrap gap-3">

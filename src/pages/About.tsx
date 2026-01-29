@@ -70,9 +70,6 @@ export default function About() {
                 <p className="mt-1 text-xl font-semibold text-[var(--color-text)]">
                   Menneskene bak prosjektene
                 </p>
-                <p className="mt-2 text-sm text-[var(--color-muted)]">
-                  Folkene som møter opp på byggeplassen og tar ansvar hele veien.
-                </p>
               </div>
               <div className="space-y-5">
                 {employees.map((employee) => (
