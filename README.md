@@ -1,73 +1,38 @@
-# React + TypeScript + Vite
+# Vest Bygg & Maskin – nettside
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Nettside levert som selvstendig freelanceoppdrag for Vest Bygg & Maskin AS i januar 2026. Jeg hadde ansvar for hele prosessen fra design til deployment.
 
-Currently, two official plugins are available:
+Dette er den opprinnelige nettsiden fra selskapets oppstartsfase. Den er ikke lenger i aktiv bruk, og repoet er lagt ut offentlig med tillatelse fra kunden som en del av porteføljen min.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Teknologi
 
-## React Compiler
+- React med TypeScript
+- Vite
+- Tailwind CSS
+- Deployet på Vercel
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Kjøre lokalt
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Bygg for produksjon:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run build
 ```
+
+## Om prosjektet
+
+Oppdraget omfattet:
+
+- Design og struktur for nettsiden i dialog med kunden
+- Utvikling av responsiv frontend
+- Oppsett av hosting og deployment på Vercel
+- Levering av ferdig løsning klar til bruk
+
+---
+
+Jarle Aragon Halden · [LinkedIn](https://www.linkedin.com/in/jarle-aragon-halden/) · [GitHub](https://github.com/JarleHalden)
